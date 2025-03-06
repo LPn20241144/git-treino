@@ -1,0 +1,102 @@
+Parte 1: Fundamentos do Git
+1.1 Configuração do Git e criação de repositório local
+Configure seu nome e e-mail no Git:
+
+git config --global user.name "Seu Nome"
+git config --global user.email "[email protected]"
+
+Crie um novo repositório local:
+
+md git-treino
+cd git-treino
+git init
+
+Conecte o repositório local ao GitHub:
+
+git remote add origin https://github.com/seu-usuario/git-treino.git
+
+1.2 Clonando e adicionando arquivos ao repositório
+Crie um novo repositório no GitHub.
+
+Clone o repositório para seu computador:
+
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+cd nome-do-repositório
+
+Crie o arquivo log.txt:
+echo. > log.txt
+
+1.3 Enviar mudanças para o GitHub
+Adicione o arquivo log.txt ao staging:
+
+
+git add log.txt
+
+Faça o commit:
+
+git commit -m "Adiciona arquivo log.txt"
+
+Envie as mudanças para o GitHub:
+
+git push origin main
+
+1.4 Trabalhando com branches
+Crie e mude para um novo branch:
+
+git checkout -b nova-feature
+
+Faça uma alteração no arquivo log.txt usando o Notepad:
+
+notepad log.txt
+
+Adicione, faça o commit e envie as mudanças:
+
+git add log.txt
+git commit -m "Adiciona nova feature"
+git push origin nova-feature
+
+Parte 2: Controle de Versão e Colaboração
+2.1 Criando e mesclando um Pull Request
+No GitHub, vá para o repositório e clique em "Pull requests".
+
+Clique em "New pull request".
+
+Selecione "nova-feature" como branch de origem e "main" como branch de destino.
+
+Crie o Pull Request com um título e descrição.
+
+Clique em "Merge pull request" e confirme o merge.
+
+2.2 Resolvendo conflitos de merge
+Crie um novo branch:
+
+
+git checkout -b outro-branch
+
+Edite o arquivo log.txt e faça um commit.
+
+Volte para o branch main e edite o mesmo arquivo:
+
+git checkout main
+
+Edite log.txt, faça um commit e tente mesclar:
+
+
+git merge outro-branch
+
+Resolva os conflitos manualmente, faça um commit e conclua o merge.
+
+2.3 Fazendo revisão de código no GitHub
+Crie um novo Pull Request no GitHub.
+
+Solicite um Code Review a um colaborador.
+
+Para comentar uma linha de código:
+
+Vá para a aba "Files changed" no Pull Request.
+
+Clique no ícone "+" ao lado do número da linha.
+
+Escreva seu comentário e sugestão de mudança.
+
+Clique em "Start a review" ou "Add review comment".
